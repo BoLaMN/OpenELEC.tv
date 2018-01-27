@@ -48,7 +48,7 @@ if [ "$TARGET_ARCH" = arm ]; then
     PKG_CONFIGURE_OPTS_TARGET+=" --disable-arm-neon"
   fi
   PKG_CONFIGURE_OPTS_TARGET+=" --disable-mmx --disable-sse2 --disable-vmx --enable-arm-simd --disable-arm-iwmmxt"
-elif [ "$TARGET_ARCH" = x86_64  ]; then
+elif [ "$TARGET_ARCH" = i386 -o "$TARGET_ARCH" = x86_64  ]; then
   PKG_CONFIGURE_OPTS_TARGET+=" --enable-mmx --enable-sse2 --disable-ssse3 --disable-vmx --disable-arm-simd --disable-arm-neon"
 fi
 

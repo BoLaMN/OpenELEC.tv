@@ -94,28 +94,28 @@ if [ -n "$need" ]; then
   case "$DISTRO" in
     ubuntu|debian|linuxmint)
       read -p "would you like to install the needed tools ? (y/n) " ans
-      [ "$ans" = "y" ] && sudo apt-get install $need_pkg
+      [ "$ans" = "y" ] && apt-get install $need_pkg
       ;;
     fedora|centos|rhel)
       if [ `which dnf` ]; then YUM=dnf; else YUM=yum; fi
       read -p "would you like to install the needed tools ? (y/n) " ans
-      [ "$ans" = "y" ] && sudo $YUM install $need_pkg
+      [ "$ans" = "y" ] && $YUM install $need_pkg
       ;;
     gentoo)
       read -p "would you like to install the needed tools ? (y/n) " ans
-      [ "$ans" = "y" ] && sudo emerge --ask --deep $need_pkg
+      [ "$ans" = "y" ] && emerge --ask --deep $need_pkg
       ;;
     mageia)
       read -p "would you like to install the needed tools ? (y/n) " ans
-      [ "$ans" = "y" ] && sudo urpmi $need_pkg
+      [ "$ans" = "y" ] && urpmi $need_pkg
       ;;
     arch)
       read -p "would you like to install the needed tools ? (y/n) " ans
-      [ "$ans" = "y" ] && sudo pacman -Sy $need_pkg
+      [ "$ans" = "y" ] && pacman -Sy $need_pkg
       ;;
     opensuse)
       read -p "would you like to install the needed tools ? (y/n) " ans
-      [ "$ans" = "y" ] && sudo zypper install -y --no-recommends $need_pkg
+      [ "$ans" = "y" ] && zypper install -y --no-recommends $need_pkg
       ;;
     *)
       echo "**** unsupported distro $DISTRO ****"
