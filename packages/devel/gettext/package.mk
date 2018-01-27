@@ -17,13 +17,12 @@
 ################################################################################
 
 PKG_NAME="gettext"
-PKG_VERSION="7b96719"
+PKG_VERSION="0.19.8.1"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://www.gnu.org/s/gettext/"
-PKG_GIT_URL="https://git.savannah.gnu.org/git/gettext.git"
-PKG_GIT_BRANCH="master"
+PKG_URL="http://ftp.gnu.org/pub/gnu/gettext/$PKG_NAME-$PKG_VERSION.tar.gz"
 PKG_DEPENDS_HOST="ccache:host"
 PKG_PRIORITY="optional"
 PKG_SECTION="toolchain/devel"
